@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turnex AI — Intelligent Automation Systems</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- GSAP for advanced animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+
+  <!-- ============================================================ -->
+  <!-- CURSOR -->
+  <!-- ============================================================ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ============================================================ -->
+  <!-- NAVBAR -->
+  <!-- ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="logo.png" alt="TechieCode Logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <div class="logo-fallback" style="display:none">
+          <span class="logo-tc">TC</span>
+          <span class="logo-name">Turnex AI</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#partners" class="nav-link">Partners</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#courses" class="nav-link">Courses</a></li>
+        <li><a href="#feedback" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================================================ -->
+
+ 
+  <section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-container">
+
+    <!-- LEFT SIDE -->
+    <div class="hero-left">
+
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text mono">AI · Automation · Vision</span>
+      </div>
+
+      <h1 class="hero-title">
+        Building <span class="gradient-text">Intelligent</span><br>
+        Automation Systems
+      </h1>
+
+      <p class="hero-sub">
+        Turnex AI builds cutting-edge AI solutions — from autonomous agents 
+        to computer vision systems that transform real-world operations.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Explore Projects</a>
+        <a href="#about" class="btn btn-ghost">Learn More</a>
+      </div>
+
+      <!-- <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-num" data-count="25">0</span>+
+          <span class="hstat-label">Projects</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-num" data-count="100">0</span>+
+          <span class="hstat-label">Clients</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-num" data-count="5">0</span>+
+          <span class="hstat-label">Domains</span>
+        </div>
+      </div> -->
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="hero-right">
+
+      <div class="hero-card">
+        <div class="card-glow"></div>
+
+        <div class="card-content">
+          <h3>AI Systems</h3>
+          <p>Smart automation with real-world impact</p>
+
+          <div class="card-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ============================================================ -->
+  <!-- ABOUT SECTION -->
+  <!-- ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-tag reveal"><span class="mono">// 01 — ABOUT</span></div>
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <h2 class="section-title">
+            Crafting AI that<br /><em>thinks, acts</em><br />and <span class="gradient-text">delivers.</span>
+          </h2>
+          <p class="about-desc">
+            Turnex AI is a boutique AI and automation studio that bridges the gap between cutting-edge research and practical business impact. We don't just build demos — we ship real systems that run in production.
+          </p>
+          <p class="about-desc">
+            From intelligent agents that handle complex multi-step workflows to computer vision pipelines that inspect products at scale — every solution is engineered for performance, reliability, and real-world resilience.
+          </p>
+          <a href="#projects" class="btn btn-primary mt-2">See Our Work</a>
+        </div>
+        <div class="about-right reveal">
+          <div class="about-pillars">
+            <div class="pillar" data-tilt>
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <h3>Automation</h3>
+              <p>End-to-end workflow automation — connecting APIs, messaging platforms, CRMs, and cloud services into seamless pipelines.</p>
+            </div>
+            <div class="pillar" data-tilt>
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              </div>
+              <h3>AI Agents</h3>
+              <p>Multi-agent architectures that reason, plan, and execute complex tasks — from document analysis to full business process automation.</p>
+            </div>
+            <div class="pillar" data-tilt>
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              </div>
+              <h3>Computer Vision</h3>
+              <p>Real-time object detection, quality inspection, and safety compliance systems built with state-of-the-art vision models.</p>
+            </div>
+            <div class="pillar" data-tilt>
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3>Real-World AI</h3>
+              <p>Production-ready solutions — not just prototypes. From PoC to deployment with monitoring, scaling, and continuous improvement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- STATS SECTION -->
+  <!-- ============================================================ -->
+  <!-- <section class="stats section" id="stats">
+    <div class="stats-bg"></div>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="25">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="100">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="98">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="5">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">AI Domains Mastered</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num" data-count="3">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Courses Running</span>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============================================================ -->
+  <!-- SERVICES SECTION -->
+  <!-- ============================================================ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-tag reveal"><span class="mono">// 02 — SERVICES</span></div>
+      <h2 class="section-title text-center reveal">What We <span class="gradient-text">Build</span></h2>
+      <p class="section-sub text-center reveal">Comprehensive AI solutions across the entire intelligence stack</p>
+      <div class="services-grid">
+        <div class="service-card reveal" data-tilt>
+          <div class="service-num mono">01</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>AI Agent Development</h3>
+          <p>Autonomous agents powered by LLMs that reason, use tools, and complete complex multi-step tasks without human intervention.</p>
+          <div class="service-tags">
+            <span>LangChain</span><span>CrewAI</span><span>GPT-4</span>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-num mono">02</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
+          <h3>Workflow Automation</h3>
+          <p>n8n, Zapier-alternative pipelines that connect your tools — WhatsApp, Google Drive, CRM, email — into zero-touch workflows.</p>
+          <div class="service-tags">
+            <span>n8n</span><span>WhatsApp API</span><span>Google APIs</span>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-num mono">03</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </div>
+          <h3>Computer Vision</h3>
+          <p>Real-time detection, classification, and quality inspection systems using YOLO, OpenCV, and custom-trained vision models.</p>
+          <div class="service-tags">
+            <span>YOLO</span><span>OpenCV</span><span>PyTorch</span>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-num mono">04</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3>RAG & Document AI</h3>
+          <p>Retrieval-Augmented Generation systems that let your team query company knowledge bases with accurate, cited answers.</p>
+          <div class="service-tags">
+            <span>Pinecone</span><span>Gemini</span><span>Embeddings</span>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-num mono">05</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3>ML Dashboards & Analytics</h3>
+          <p>Power BI dashboards with embedded ML predictions — churn, attrition, patient risk — giving decision-makers real insight.</p>
+          <div class="service-tags">
+            <span>Power BI</span><span>scikit-learn</span><span>Python</span>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-num mono">06</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3>AI Education & Training</h3>
+          <p>Structured courses in AI, ML, and automation — for beginners to advanced practitioners, including kids-first programs.</p>
+          <div class="service-tags">
+            <span>Python</span><span>n8n</span><span>ML Fundamentals</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- GLOBAL PROJECTS SECTION -->
+  <!-- ============================================================ -->
+  <section class="global-projects section" id="global-projects">
+    <div class="container">
+      <div class="section-tag reveal"><span class="mono">// 02.5 — GLOBAL PROJECTS</span></div>
+      <h2 class="section-title text-center reveal">Global <span class="gradient-text">Projects</span></h2>
+      <p class="section-sub text-center reveal">Our international collaborations and initiatives</p>
+      <div class="global-grid">
+        <div class="global-card reveal">
+          <img src="./img/singapore-web.png" alt="Singapore Website Development">
+          <h3>Singapore Website Development</h3>
+          <p>Developing modern websites for clients in Singapore.</p>
+        </div>
+        <div class="global-card reveal">
+          <img src="./img/infosis.jpeg" alt="Infosis AI Courses">
+          <h3>Infosis AI Courses</h3>
+          <p>AI training programs in partnership with Infosis.</p>
+        </div>
+        <div class="global-card reveal">
+          <img src="./img/aus.jpeg" alt="Australia M.S Project Mentor in RMIT University">
+          <h3>Australia M.S Project Mentor in RMIT University</h3>
+          <p>Mentoring master's students in AI projects at RMIT.</p>
+        </div>
+        <div class="global-card reveal">
+          <img src="./img/university.jpeg" alt="Anna University Mentorship Programs">
+          <h3>Anna University Mentorship Programs</h3>
+          <p>Mentorship initiatives for students at Anna University.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PARTNERS SECTION -->
+  <!-- ============================================================ -->
+  <section class="partners section" id="partners">
+    <div class="container">
+      <div class="section-tag reveal"><span class="mono">// 03 — OUR PARTNERS</span></div>
+      <h2 class="section-title text-center reveal">Trusted <span class="gradient-text">Partners</span></h2>
+      <p class="section-sub text-center reveal">Collaborating with industry leaders to deliver exceptional solutions</p>
+      <div class="partners-grid">
+        <div class="partner-card reveal" data-tilt>
+          <div class="partner-logo">
+            <span class="partner-name">SK Engineering and Automations</span>
+          </div>
+          <p>Leading provider of engineering solutions and automation systems. <span class="partner-country">Singapore</span></p>
+          <a href="https://skeapl.com/" target="_blank" class="btn btn-ghost">Visit Website</a>
+        </div>
+        <div class="partner-card reveal" data-tilt>
+          <div class="partner-logo">
+            <span class="partner-name">Crafola Solutions</span>
+          </div>
+          <p>Innovative solutions for modern business challenges. <span class="partner-country">India</span></p>
+          <a href="https://www.crafolasolutions.com/" target="_blank" class="btn btn-ghost">Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TECH STACK SECTION -->
+  <!-- ============================================================ -->
+  <section class="techstack section" id="techstack">
+    <div class="container">
+      <div class="section-tag reveal"><span class="mono">// 04 — TECH STACK</span></div>
+      <h2 class="section-title text-center reveal">Powered by <span class="gradient-text">Best-in-Class</span> Tools</h2>
+      <div class="tech-marquee-wrap">
+        <div class="tech-marquee">
+          <div class="tech-track" id="techTrack">
+            <div class="tech-item"><span class="tech-icon">🐍</span><span>Python</span></div>
+            <div class="tech-item"><span class="tech-icon">🤖</span><span>LangChain</span></div>
+            <div class="tech-item"><span class="tech-icon">⚡</span><span>n8n</span></div>
+            <div class="tech-item"><span class="tech-icon">👁️</span><span>OpenCV</span></div>
+            <div class="tech-item"><span class="tech-icon">🔥</span><span>PyTorch</span></div>
+            <div class="tech-item"><span class="tech-icon">🌟</span><span>Gemini API</span></div>
+            <div class="tech-item"><span class="tech-icon">🧠</span><span>GPT-4</span></div>
+            <div class="tech-item"><span class="tech-icon">📊</span><span>Power BI</span></div>
+            <div class="tech-item"><span class="tech-icon">☁️</span><span>Google Cloud</span></div>
+            <div class="tech-item"><span class="tech-icon">🗃️</span><span>Pinecone</span></div>
+            <div class="tech-item"><span class="tech-icon">📱</span><span>WhatsApp API</span></div>
+            <div class="tech-item"><span class="tech-icon">🔗</span><span>CrewAI</span></div>
+            <div class="tech-item"><span class="tech-icon">📦</span><span>FastAPI</span></div>
+            <div class="tech-item"><span class="tech-icon">🎯</span><span>YOLO</span></div>
+            <div class="tech-item"><span class="tech-icon">🐍</span><span>Python</span></div>
+            <div class="tech-item"><span class="tech-icon">🤖</span><span>LangChain</span></div>
+            <div class="tech-item"><span class="tech-icon">⚡</span><span>n8n</span></div>
+            <div class="tech-item"><span class="tech-icon">👁️</span><span>OpenCV</span></div>
+            <div class="tech-item"><span class="tech-icon">🔥</span><span>PyTorch</span></div>
+            <div class="tech-item"><span class="tech-icon">🌟</span><span>Gemini API</span></div>
+            <div class="tech-item"><span class="tech-icon">🧠</span><span>GPT-4</span></div>
+            <div class="tech-item"><span class="tech-icon">📊</span><span>Power BI</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PROJECTS SECTION -->
+  <!-- ============================================================ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-tag reveal"><span class="mono">// 05 — PROJECTS</span></div>
+      <h2 class="section-title text-center">Real Work. <span class="gradient-text">Real Impact.</span></h2>
+      <p class="section-sub text-center reveal">Production systems deployed across industries and use cases</p>
+
+      <!-- Filter Tabs -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn " data-filter="automation">Automation</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        <button class="filter-btn" data-filter="genai">Generative AI</button>
+        <button class="filter-btn" data-filter="ml">ML & Analytics</button>
+        <button class="filter-btn" data-filter="dev">Development</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- AUTOMATION -->
+        <div class="project-card reveal" data-category="automation" data-tilt>
+          <div class="proj-cat-badge automation">Automation</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <h3>RAG Chatbot for Company Documents</h3>
+          <p>AI chatbot connected to Google Drive — employees ask questions and get accurate, cited answers from internal documents using Gemini.</p>
+          <div class="proj-tags"><span>Google Drive</span><span>Gemini</span><span>RAG</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="automation" data-tilt>
+          <div class="proj-cat-badge automation">Automation</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>WhatsApp Lead Generation Automation</h3>
+          <p>Upload an Excel sheet of leads and automatically send personalized WhatsApp messages with follow-up sequences — zero manual effort.</p>
+          <div class="proj-tags"><span>WhatsApp API</span><span>Excel</span><span>n8n</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="automation" data-tilt>
+          <div class="proj-cat-badge automation">Automation</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          </div>
+          <h3>Personal Life Manager</h3>
+          <p>Telegram bot + Google Calendar + Voice AI that manages your schedule, reminders, tasks, and daily briefings — your personal AI chief of staff.</p>
+          <div class="proj-tags"><span>Telegram</span><span>Google APIs</span><span>Voice AI</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="automation" data-tilt>
+          <div class="proj-cat-badge automation">Automation</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+          </div>
+          <h3>Social Media Automation</h3>
+          <p>AI-driven content generation + scheduling pipeline that creates, captions, and posts content across Instagram, LinkedIn, and Twitter automatically.</p>
+          <div class="proj-tags"><span>n8n</span><span>GPT-4</span><span>Social APIs</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- COMPUTER VISION -->
+        <div class="project-card reveal" data-category="cv" data-tilt>
+          <div class="proj-cat-badge cv">Computer Vision</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Automated Quality Inspection for Beverage Bottles</h3>
+          <p>Real-time YOLO-based vision system that detects defects, label misalignment, and fill-level issues on a production line with 99%+ accuracy.</p>
+          <div class="proj-tags"><span>YOLO</span><span>OpenCV</span><span>Python</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="cv" data-tilt>
+          <div class="proj-cat-badge cv">Computer Vision</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <h3>Advanced Pothole Detection & Recommendation</h3>
+          <p>Drone/dashcam footage analysis system that detects, maps, and prioritizes potholes with GPS coordinates and severity scoring for municipal repair planning.</p>
+          <div class="proj-tags"><span>YOLO</span><span>GPS Mapping</span><span>OpenCV</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="cv" data-tilt>
+          <div class="proj-cat-badge cv">Computer Vision</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3>PPE Compliance Detection System</h3>
+          <p>Safety monitoring system that detects helmet, vest, glove, and mask compliance in real-time across factory CCTV feeds with instant alerts.</p>
+          <div class="proj-tags"><span>YOLO</span><span>CCTV Integration</span><span>Alerts</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- GENERATIVE AI -->
+        <div class="project-card reveal" data-category="genai" data-tilt>
+          <div class="proj-cat-badge genai">Generative AI</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3>RAG-Based Document Chatbot</h3>
+          <p>Enterprise-grade document intelligence system with semantic search, multi-document reasoning, and source citations for accurate retrieval.</p>
+          <div class="proj-tags"><span>RAG</span><span>Pinecone</span><span>LangChain</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="genai" data-tilt>
+          <div class="proj-cat-badge genai">Generative AI</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          </div>
+          <h3>AI Resume Analyzer</h3>
+          <p>GPT-powered resume scoring and feedback tool that matches resumes against job descriptions, identifies gaps, and suggests targeted improvements.</p>
+          <div class="proj-tags"><span>GPT-4</span><span>NLP</span><span>Python</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="genai" data-tilt>
+          <div class="proj-cat-badge genai">Generative AI</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>AI Interview Preparation Bot</h3>
+          <p>Conversational AI that conducts realistic mock interviews, evaluates responses, and provides detailed feedback tailored to specific roles and companies.</p>
+          <div class="proj-tags"><span>LLM</span><span>Speech-to-Text</span><span>RAG</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="genai" data-tilt>
+          <div class="proj-cat-badge genai">Generative AI</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3>Multi-Agent Task Automation System</h3>
+          <p>CrewAI-based system where specialized agents collaborate — researcher, writer, analyst — to autonomously complete complex multi-step business tasks.</p>
+          <div class="proj-tags"><span>CrewAI</span><span>LangChain</span><span>OpenAI</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="genai" data-tilt>
+          <div class="proj-cat-badge genai">Generative AI</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+          </div>
+          <h3>Voice-Based AI Assistant</h3>
+          <p>Always-on voice assistant with wake-word detection, real-time STT/TTS, and integration with calendars, email, and business applications.</p>
+          <div class="proj-tags"><span>Whisper</span><span>TTS</span><span>LLM</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="genai" data-tilt>
+          <div class="proj-cat-badge genai">Generative AI</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+          </div>
+          <h3>AI-Based Attendance System</h3>
+          <p>Face-recognition attendance system with live anti-spoofing, automated reporting, and integration with HR platforms — no cards or PINs needed.</p>
+          <div class="proj-tags"><span>Face Recognition</span><span>OpenCV</span><span>Python</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- ML / POWER BI -->
+        <div class="project-card reveal" data-category="ml" data-tilt>
+          <div class="proj-cat-badge ml">ML + Power BI</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3>Customer Churn Prediction Dashboard</h3>
+          <p>ML model + Power BI dashboard that predicts which customers will churn, with risk scores, key drivers, and recommended retention interventions.</p>
+          <div class="proj-tags"><span>XGBoost</span><span>Power BI</span><span>Python</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="ml" data-tilt>
+          <div class="proj-cat-badge ml">ML + Power BI</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3>Healthcare Patient Risk Prediction</h3>
+          <p>Predictive analytics system that flags high-risk patients for readmission or complications, giving healthcare teams advance warning for intervention.</p>
+          <div class="proj-tags"><span>Random Forest</span><span>Power BI</span><span>HL7</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="ml" data-tilt>
+          <div class="proj-cat-badge ml">ML + Power BI</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3>Employee Attrition Analysis Dashboard</h3>
+          <p>HR analytics platform predicting which employees are at risk of leaving, with department-level breakdowns and actionable retention recommendations.</p>
+          <div class="proj-tags"><span>Logistic Regression</span><span>Power BI</span><span>SHAP</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- DEV -->
+        <div class="project-card reveal" data-category="dev" data-tilt>
+          <div class="proj-cat-badge dev">Development</div>
+          <div class="proj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3>Website Development</h3>
+          <p>Modern, responsive websites and web applications — from landing pages and portfolios to full-stack platforms with AI features baked in.</p>
+          <div class="proj-tags"><span>React</span><span>Next.js</span><span>FastAPI</span></div>
+          <div class="proj-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- COURSES SECTION -->
+  <!-- ============================================================ -->
+  <section class="courses section" id="courses">
+    <div class="container">
+      <div class="section-tag reveal"><span class="mono">// 06 — COURSES</span></div>
+      <h2 class="section-title text-center reveal">Learn <span class="gradient-text">AI & Automation</span></h2>
+      <p class="section-sub text-center reveal">Structured programs from beginners to professionals</p>
+
+      <div class="courses-grid">
+        <div class="course-card reveal" data-tilt>
+          <div class="course-badge">Most Popular</div>
+          <div class="course-icon">🤖</div>
+          <div class="course-level mono">BEGINNER → INTERMEDIATE</div>
+          <h3>AI + Machine Learning Course</h3>
+          <p class="course-tagline">Designed for Curious Minds (Kids 12+)</p>
+          <p>A structured journey from "what is AI?" to building real ML models. Covers Python basics, supervised/unsupervised learning, neural networks, and mini-projects — all with fun, real-world examples.</p>
+          <ul class="course-features">
+            <li><span class="check">✓</span> Python Fundamentals</li>
+            <li><span class="check">✓</span> ML Algorithms Explained Simply</li>
+            <li><span class="check">✓</span> Hands-on Mini Projects</li>
+            <li><span class="check">✓</span> Certificate on Completion</li>
+          </ul>
+          <div class="course-footer">
+            <a href="#contact" class="btn btn-primary">Enroll Now →</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal featured" data-tilt>
+          <div class="course-badge featured-badge">New</div>
+          <div class="course-icon">⚡</div>
+          <div class="course-level mono">NO CODE → PRO</div>
+          <h3>n8n Automation Mastery</h3>
+          <p class="course-tagline">Build Powerful Automations Without Code</p>
+          <p>Master n8n to automate your business workflows — connect apps, trigger actions, handle data, and build AI-powered pipelines without writing a single line of code.</p>
+          <ul class="course-features">
+            <li><span class="check">✓</span> n8n Fundamentals & Advanced Nodes</li>
+            <li><span class="check">✓</span> Real Business Automation Templates</li>
+            <li><span class="check">✓</span> AI Agent Integration</li>
+            <li><span class="check">✓</span> WhatsApp & Google Integrations</li>
+          </ul>
+          <div class="course-footer">
+            <a href="#contact" class="btn btn-primary">Enroll Now →</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal" data-tilt>
+          <div class="course-badge">Professional</div>
+          <div class="course-icon">🐍</div>
+          <div class="course-level mono">INTERMEDIATE → ADVANCED</div>
+          <h3>Python Automation Mastery</h3>
+          <p class="course-tagline">Automate Everything with Python</p>
+          <p>From file management and web scraping to API integrations and AI pipelines — master Python automation that saves hours every week and scales infinitely.</p>
+          <ul class="course-features">
+            <li><span class="check">✓</span> Web Scraping & Browser Automation</li>
+            <li><span class="check">✓</span> API Integration Patterns</li>
+            <li><span class="check">✓</span> AI Tool Integration</li>
+            <li><span class="check">✓</span> Real-World Projects Portfolio</li>
+          </ul>
+          <div class="course-footer">
+            <a href="#contact" class="btn btn-primary">Enroll Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FEEDBACK / TESTIMONIALS SECTION -->
+  <!-- ============================================================ -->
+  <section class="feedback section" id="feedback">
+    <div class="container">
+      <div class="section-tag reveal"><span class="mono">// 07 — TESTIMONIALS</span></div>
+      <h2 class="section-title text-center reveal">What Clients <span class="gradient-text">Say</span></h2>
+      <p class="section-sub text-center reveal">Real results, real feedback</p>
+
+      <div class="testimonials-grid reveal">
+
+          <!-- <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"The WhatsApp automation Turnex AI built for us has transformed our lead follow-up. We went from manually messaging 50 leads a day to automating 500+ — response rates doubled."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RP</div>
+              <div>
+                <div class="author-name">Rahul Patel</div>
+                <div class="author-role mono">Sales Director, RealEstate Co.</div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"The PPE detection system they deployed at our factory runs 24/7 with zero false negatives. We haven't had a compliance incident since deployment. Absolutely game-changing safety improvement."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SK</div>
+              <div>
+                <div class="author-name">Suresh Kumar</div>
+                <div class="author-role mono">Plant Manager, ManufactureTech</div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Turnex AI's n8n course is phenomenal. In 3 weeks I built automations that save my team 15 hours a week. The real-world projects made everything click. Highly recommend!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AM</div>
+              <div>
+                <div class="author-name">Anjali Mehta</div>
+                <div class="author-role mono">Operations Manager, StartupXYZ</div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Their RAG chatbot for our HR documents is incredible. Employees now self-serve policy questions in seconds instead of emailing HR. The team's technical depth is impressive."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PV</div>
+              <div>
+                <div class="author-name">Priya Venkat</div>
+                <div class="author-role mono">HR Head, GlobalCorp India</div>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"My 13-year-old son completed the AI course and built his own ML project. Turnex Ai helps to understand and explains complex concepts in a way that actually sticks. Best investment we made this year."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">DG</div>
+              <div>
+                <div class="author-name">Deepa Gopal</div>
+                <div class="author-role mono">Parent, Chennai</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"The mentorship program with Turnex Ai helped me master complex AI concepts and apply them practically. Highly recommended!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">KU</div>
+              <div>
+                <div class="author-name">Kumarn</div>
+                <div class="author-role mono">Mentee, Infosys AI Courses</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Turnex Ai website management for SK Engineering has been exceptional and ensured our site is modern, fast, and user-friendly. Their attention to detail is outstanding."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SA</div>
+              <div>
+                <div class="author-name">Sathish</div>
+                <div class="author-role mono">Website Manager, SK Engineering</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"The mentorship from Turnex Ai for my M.S project at RMIT was invaluable and received expert guidance that helped her excel in AI research and development."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RA</div>
+              <div>
+                <div class="author-name">Rakshana</div>
+                <div class="author-role mono">Mentee, RMIT University</div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="feedback-cta reveal">
+        <p>Have you worked with us? We'd love your feedback.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfh6XEmADAXRKSLk6W3O2U2EoIEXdOB_f9gRYF2QQeR1jGCIA/viewform?usp=publish-editor" target="_blank" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          Leave Feedback on Google Forms
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CONTACT SECTION -->
+  <!-- ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-tag reveal"><span class="mono">// 08 — CONTACT</span></div>
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <h2 class="section-title">Let's Build<br /><span class="gradient-text">Something Real</span></h2>
+          <p class="contact-desc">Whether you have a project in mind, a problem to solve, or just want to explore what AI can do for your business — drop us a message.</p>
+          <div class="contact-info">
+            <!-- <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>techiecode001@gmail.com</span>
+            </div> -->
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Chennai, Tamil Nadu, India</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              <span>WhatsApp: +91 8072779321</span>
+            </div>
+          </div>
+          <!-- <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </div> -->
+        </div>
+
+<div class="contact-right reveal">
+  <form 
+    class="contact-form" 
+    id="contactForm" 
+    action="https://formspree.io/f/mdayoedq"
+    method="POST"
+    novalidate
+  >
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+      <span class="form-error" id="nameError"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@company.com" required />
+      <span class="form-error" id="emailError"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="service">Interested In</label>
+      <select id="service" name="service">
+        <option value="">Select a service...</option>
+        <option>AI Agent Development</option>
+        <option>Workflow Automation</option>
+        <option>Computer Vision</option>
+        <option>RAG / Document AI</option>
+        <option>ML Dashboard</option>
+        <option>AI Courses</option>
+        <option>Website Development</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tell us about your project or idea..." required></textarea>
+      <span class="form-error" id="messageError"></span>
+    </div>
+
+    <!-- Optional hidden fields -->
+    <input type="hidden" name="_subject" value="New Contact Form Submission">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+      <span id="submitText">Send Message</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+
+    <div class="form-success" id="formSuccess">
+      ✅ Message sent! We'll get back to you within 24 hours.
+    </div>
+  </form>
+</div>  
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-tc">TC</span>
+            <span class="logo-name">Turnex AI</span>
+          </div>
+          <p>Building intelligent automation systems that solve real business problems — one AI solution at a time.</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4 class="mono">Navigate</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#partners">Partners</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#courses">Courses</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="mono">Services</h4>
+            <ul>
+              <li><a href="#services">AI Agents</a></li>
+              <li><a href="#services">Automation</a></li>
+              <li><a href="#services">Computer Vision</a></li>
+              <li><a href="#services">RAG Systems</a></li>
+            </ul>
+          </div>
+          <!-- <div class="footer-col">
+            <h4 class="mono">Connect</h4>
+            <ul>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">GitHub</a></li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mono">© 2026 Turnex AI. All rights reserved.</p>
+        <p class="mono">Built with ❤️ and a lot of AI</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
